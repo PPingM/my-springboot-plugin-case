@@ -35,10 +35,10 @@ public class ResponseAspect {
 
     Logger LOG = Logger.getLogger(ResponseAspect.class);
 
-    @Pointcut("execution(* com.ultrapower.secsight.checkhive.controller.*.*(..))")
+    @Pointcut("execution(* com.rxx.hivecase.checkhive.controller.*.*(..))")
     public void responseCrossOriginPointcut(){}
 
-    @Pointcut("execution(* com.ultrapower.secsight.checkhive.controller.*.*(..)) && @annotation(com.rxx.hivecase.plugin.ResponseJson)")
+    @Pointcut("execution(* com.rxx.hivecase.checkhive.controller.*.*(..)) && @annotation(com.rxx.hivecase.plugin.ResponseJson)")
     public void responseBodyPointcut(){}
 
     @Before(value = "responseCrossOriginPointcut()")
